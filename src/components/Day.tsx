@@ -1,10 +1,11 @@
 
 interface Props {
-
+	day: string;
+	className?: string;
 }
 
-export default function Day() {
+export default function Day({ day }: Props) {
 	return (
-		<div>Hello Day:3</div>
+		<div>Hello { day }:3</div>
 	)
 }

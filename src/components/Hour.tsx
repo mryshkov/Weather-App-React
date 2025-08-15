@@ -1,10 +1,10 @@
 
 interface Props {
-
+	hour: string;
 }
 
-export default function Hour() {
+export default function Hour( { hour }: Props ) {
 	return (
-		<div>Hello Hour:3</div>
+		<div>Hello { hour }:3</div>
 	)
 }

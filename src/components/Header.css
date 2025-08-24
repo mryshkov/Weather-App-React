@@ -1,9 +1,212 @@
 
-header{
+#header-container {
+    display: flex;
+    justify-content: center;
+    background: #5964BE;
+    width: 100vw;
+    height: 5.4rem;
+    position: fixed;
 
+    animation: header-shrink linear both;
+    z-index: 99999;
+}
+
+.header {
+    background: #5964BE;
+    position: fixed;
+
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+
+    display: flex;
+    align-items: center;
+    height: 5.4rem;
+
+    animation: header-shrink linear both;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+#header-logo {
+    width: 5.2em;
+    height: 5.2em;
+    border-radius: 1.1em;
+    animation: logo-shrink linear both;
+}
+
+.title {
+    font-size: 1.8em;
+    margin-right: 0.9em;
+    font-weight: 600;
+    border-radius: 0.7em;
+    padding: 0.4em 0.6em;
+    color: #FDFEB1;
+}
+
+.title:hover {
+    /*background: radial-gradient();*/
+}
+
+.small-icon {
+    width: 2.4em;
+    margin-right: 0.8em;
+}
+
+#searchbar {
+    font-size: 1.2em;
+    width: 32em;
+    height: 2em;
+    margin-top: -0.2em;
+    margin-right: 4.6em;
+    border-radius: 0.2em;
+    border: 2px solid #1B1B1B;
+    outline: none;
+}
+
+#searchbar:focus {
+    border: 2px solid #1B1B1B;
+}
+/*#F9F9F9*/
+
+
+#header-container, .header, #header-logo {
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+}
+
+
+@media screen and (max-width: 1000px){
+    .header {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1180px) {
+    .header{
+        font-size: 12px;
+    }
+}
+
+
+@keyframes header-shrink {
+    to {
+       height: 4.6rem;
+    }
+}
+@keyframes logo-shrink {
+    to {
+        width: 4.7em;
+        height: 4.7em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.header{
+    position: fixed;
+    left: 10vw;
+
+    z-index: 999;
+
+    width: 80vw;
+    height: 8vh;
+    border: 1px solid black;
+
+    padding-bottom: 0;
+}
+
+/* left
+   side
+
+
+.left-side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #header-logo {
     width: 50px;
     border-radius: 10px;
+    transition: filter 300ms;
+    margin: 0 auto;
 }
+
+#header-logo:hover {
+    filter: drop-shadow(5px 3px linear-gradient(90deg, rgb(31,98,239), rgb(27,210,254)));
+}
+
+.header .title {
+    font-size: 1.7rem;
+    margin: 0 auto;
+}
+
+/*
+    middle
+
+
+#searchbar {
+    background: whitesmoke;
+    width: 30vw;
+    height: 60%;
+    border: none;
+}
+
+.middle {
+    padding: 0;
+    margin: 0;
+}
+
+/* right
+    side
+
+
+.right-side {
+
+}
+
+.small-icon {
+    width: 1.5em;
+    margin: 1em;
+}
+
+*/
